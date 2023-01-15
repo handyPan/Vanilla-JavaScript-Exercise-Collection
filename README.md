@@ -1,4 +1,4 @@
-# Vanilla-JavaScript-Exercise-Collection# Angular Exercise Collection
+# Vanilla-JavaScript-Exercise-Collection
 
 This is a repository for housing the Vanilla Javascript exercises/small projects. See the demonstration of each exercise below.
 
