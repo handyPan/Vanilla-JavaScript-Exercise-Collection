@@ -102,12 +102,15 @@ function addTodo(event) {
     todoDiv.appendChild(deleteBtn);
     todoList.appendChild(todoDiv);
     */
+   
     // re-implement above codes
+    /*
     todoList.innerHTML += `<div class="todo-item">
             <li class="todo-item-name">${todoInput.value}</li>
             <button class="complete-btn"><i class="fas fa-check"></i></button>
             <button class="delete-btn"><i class="fas fa-trash"></i></button>
         </div>`;
+    */
 
     // save to local storage
     let todoItem = new Object();
@@ -116,6 +119,9 @@ function addTodo(event) {
     saveLocalTodos(todoItem);
 
     todoInput.value = "";
+
+    getTodos();
+
 }
 
 function deleteCheck(e) {
