@@ -176,8 +176,22 @@ function filterTodo(e) {
     });
 }
 
+function inputOnFocus() {
+    if (todoInput.classList.contains('input-error')) {
+        todoInput.classList.remove('input-error');
+    }
+}
+
+function inputOnBlur() {
+    if (todoInput.value == "" && !todoInput.classList.contains('input-error')) {
+        todoInput.classList.add('input-error');
+    }
+}
+
 // event listeners
 document.addEventListener('DOMContentLoaded', getTodos);
+todoInput.addEventListener('focus', inputOnFocus);
+todoInput.addEventListener('blur', inputOnBlur);
 todoBtn.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterTodo);
