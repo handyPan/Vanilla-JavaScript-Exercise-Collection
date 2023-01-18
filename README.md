@@ -13,3 +13,4 @@ For video demonstration, please visit the project website at <a href="https://ha
 [Exercise 002 - Superhero Search](https://handypan.github.io/Vanilla-JavaScript-Exercise-Collection/ex002-superhero-search/)<br>
 [Exercise 003 - Quiz App](https://handypan.github.io/Vanilla-JavaScript-Exercise-Collection/ex003-quiz-app/)<br>
 [Exercise 004 - Todo List](https://handypan.github.io/Vanilla-JavaScript-Exercise-Collection/ex004-todo-list/)<br>
+[Exercise 005 - Multiple Theme](https://handypan.github.io/Vanilla-JavaScript-Exercise-Collection/ex005-multiple-theme/)<br>
