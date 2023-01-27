@@ -14,3 +14,4 @@ For video demonstration, please visit the project website at <a href="https://ha
 [Exercise 003 - Quiz App](https://handypan.github.io/Vanilla-JavaScript-Exercise-Collection/ex003-quiz-app/)<br>
 [Exercise 004 - Todo List](https://handypan.github.io/Vanilla-JavaScript-Exercise-Collection/ex004-todo-list/)<br>
 [Exercise 005 - Multiple Theme](https://handypan.github.io/Vanilla-JavaScript-Exercise-Collection/ex005-multiple-theme/)<br>
+[Exercise 006 - File Uploader](https://handypan.github.io/Vanilla-JavaScript-Exercise-Collection/ex006-file-uploader/)<br>

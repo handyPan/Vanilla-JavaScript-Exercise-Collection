@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ex {
+    display: none;
+}
+
+/* ex1 */
+
+#image-display-ex1 {
+    width: 375px;
+    height: 211px;
+    border: 1px solid #ccc;
+    background-position: center;
+    background-size: cover;
+}
+
+/* ex2 */
+
+.container {
+    width: 450px;
+    max-width: 720px;
+    height: 90vh;
+    background: #222;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    position: relative;
+}
+
+#textBox {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+#prevText {
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    transform: translateX(-50%);
+    width: 90%;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 2px 2px 20px #000;
+}
+
+#image-input-ex2 {
+    display: none;
+}
+
+.upload-icon-ex2 {
+    position: absolute;
+    width: 60px;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+/* ex3 */
+.link {
+    text-decoration: none;
+    color: #555;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.link.active {
+    text-decoration: underline;
+}
+
+.drag-drop-area-ex3 {
+    border: 2px dashed #fff;
+    height: 500px;
+    width: 400px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-drop-area-ex3 .active {
+    border: 2px solid #fff;
+}
+
+.drag-drop-area-ex3 .icon-ex3 {
+    font-size: 100px;
+    color: #fff;
+}
+
+.drag-drop-area-ex3 #header-ex3 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.drag-drop-area-ex3 span {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+}
+
+.drag-drop-area-ex3 button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-drop-area-ex3 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.drag-drop-area-ex3 #select-again {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ex4 */
+
+::selection {
+    color: #fff;
+    background: #6990f2;
+}
+
+.wrapper-ex4 {
+    width: 430px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+}
+
+.wrapper-ex4 #header-ex4 {
+    color: #6990f2;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper-ex4 form {
+    height: 167px;
+    display: flex;
+    cursor: pointer;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed #6990f2;
+}
+
+.wrapper-ex4 form :where(i, p) {
+    color: #6990f2;
+}
+
+.wrapper-ex4 form i {
+    font-size: 50px;
+}
+
+.wrapper-ex4 form p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.wrapper-ex4 section .row i {
+    color: #6990f2;
+    font-size: 30px;
+}
+
+.wrapper-ex4 section .details span {
+    font-size: 14px;
+}
+
+.progress-area-ex4 .row .content {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.progress-area-ex4 .details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+}
+
+.progress-area-ex4 .content .progress-bar {
+    width: 100%;
+    height: 6px;
+    margin-bottom: 4px;
+    background: #fff;
+    border-radius: 30px;
+}
+
+.progress-area-ex4 .content .progress-bar .progress {
+    width: 0%;
+    height: 100%;
+    background: #6990f2;
+    border-radius: inherit;
+}
+
+.uploaded-area-ex4 {
+    max-height: 232px;
+    overflow-y: scroll;
+}
+
+.uploaded-area-ex4.onprogress {
+    max-height: 150px;
+}
+
+.uploaded-area-ex4::-webkit-scrollbar {
+    width: 0px;
+}
+
+.uploaded-area-ex4 .row .content {
+    display: flex;
+    align-items: center;
+}
+
+.uploaded-area-ex4 .row .details {
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+.uploaded-area-ex4 .row .details .size {
+    color: #404040;
+    font-size: 11px;
+}
+
+.uploaded-area-ex4 i.fa-check {
+    font-size: 16px;
+}

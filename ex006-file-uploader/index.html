@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploader</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div>
+        <a class="link" href="">ex1</a>
+        <a class="link" href="">ex2</a>
+        <a class="link" href="">ex3</a>
+        <a class="link" href="">ex4</a>
+        <a class="link" href="">ex5</a>
+        <a class="link" href="">ex6</a>
+    </div>
+    <div class="ex" id="ex1">
+        <input type="file" id="image-input-ex1" accept="image/png, image/jpg">
+        <div id="image-display-ex1"></div>
+    </div>
+    <div class="ex" id="ex2">
+        <div class="container" id="imgBox">
+            <div id="prevText"></div>
+            <textarea name="" id="textBox" placeholder="Add caption:"></textarea>
+            <input type="file" accept="image/*" name="img-ex2" id="image-input-ex2">
+            <label for="image-input-ex2"><img src="img/upload.png" alt="" class="upload-icon-ex2"></label>
+        </div>
+    </div>
+    <div class="ex" id="ex3">
+        <div class="drag-drop-area-ex3">
+            <div class="icon-ex3"><i class="fas fa-cloud-upload-alt"></i></div>
+            <div id="header-ex3">Drag & Drop to Upload File</div>
+            <span>or</span>
+            <button>Browse File</button>
+            <input type="file" hidden>
+        </div>
+    </div>
+    <div class="ex" id="ex4">
+        <div class="wrapper-ex4">
+            <div id="header-ex4">File UPloader with Ajax</div>
+            <form action="#">
+                <input type="file" class="file-input-ex4" name="file-input-ex4" hidden>
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Browse File to Upload</p>
+            </form>
+            <section class="progress-area-ex4"></section>
+            <section class="uploaded-area-ex4"></section>
+        </div>
+    </div>
+    <div class="ex" id="ex5">
+        <h1>Upload files with Fetch API</h1>
+        <form action="" class="form-ex5" id="form-ex5">
+            <input type="file" name="file-input-ex5" id="file-input-ex5"><br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    <div class="ex" id="ex6">
+        <h1>Upload multiple files with Fetch API</h1>
+        <input type="file" id="file-input-ex6" multiple>
+        <button type="submit" id="upload-button-ex6">Upload</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
