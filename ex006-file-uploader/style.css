@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-* {
+*, ::after, ::before {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -8,12 +8,13 @@
 }
 
 body {
-    background: #eee;
-    height: 100vh;
+    background: #dfe3f2;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
     gap: 10px;
 }
 
@@ -274,4 +275,144 @@ body {
 
 .uploaded-area-ex4 i.fa-check {
     font-size: 16px;
+}
+
+/* ex7 */
+
+#result-ex7 {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.thumbnail-ex7 {
+    height: 192px;
+}
+
+/* ex8 */
+
+.card-ex8 {
+    width: 400px;
+    height: auto;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fafbff;
+}
+
+.card-ex8 .top-ex8 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card-ex8 .top-ex8 p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #878a9a;
+}
+
+.card-ex8 .top-ex8 button {
+    outline: 0;
+    border: 0;
+    -webkit-appearance: none;
+    background: #5256ad;
+    color: #fff;
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    font-size: 0.8rem;
+    padding: 8px 13px;
+}
+
+.card-ex8 .top-ex8 button:hover {
+    opacity: 0.8;
+}
+
+.card-ex8 .top-ex8 button:active {
+    transform: translateY(5px);
+}
+
+form {
+    width: 100%;    
+    height: 160px;
+    border-radius: 5px;
+    border: 2px dashed #d5d5e1;
+    color: #c8c9dd;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    background: #dfe3f259;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    margin-top: 20px;
+}
+
+form.drag-over-ex8 {
+    border-style: solid;
+    /* font-size: 2rem; */
+    color: #c8c9dd;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.34);
+}
+
+form .select-ex8 {
+    color: #5256ad;
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+form input {
+    display: none;
+}
+
+.container-ex8 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    height: auto;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.container-ex8 .image-ex8 {
+    height: 85px;
+    width: 85px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 7px;
+    margin-right: 7px;
+}
+
+.container-ex8 .image-ex8:nth-child(4n) {
+    margin-right: 0;
+}
+
+.container-ex8 .image-ex8 img {
+    height: 100%;
+    width: 100%;
+}
+
+.container-ex8 .image-ex8 span {
+    position: absolute;
+    top: -4px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #fff;
+}
+
+.container-ex8 .image-ex8 span:hover {
+    opacity: 0.8;
 }

@@ -42,7 +42,7 @@ const showDiv = (divId) => {
         document.getElementById('body').style.background = '#6990f2';
         changeStylesheetRule(document.styleSheets[1], ".link", "color", "#fff");
     } else {
-        document.getElementById('body').style.background = '#eee';
+        document.getElementById('body').style.background = '#dfe3f2';
         changeStylesheetRule(document.styleSheets[1], ".link", "color", "#555");
     }
     document.querySelectorAll('.ex').forEach(ex => ex.style.display = 'none');
@@ -279,9 +279,112 @@ btnUploadEx6.addEventListener('click', function(e) {
     }).catch(console.error);
 });
 
+// ex7
 
+const inputEx7 = document.querySelector("#files-ex7");
 
+inputEx7.addEventListener("change", (e) => {
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+        const files = e.target.files;
+        console.log(files);
+        const output = document.querySelector("#result-ex7");
 
+        for(let i=0;i<files.length;i++) {
+            if(!files[i].type.match("image")) continue;
+            const picReader = new FileReader();
+            picReader.addEventListener("load", function(e) {
+                const picFile = e.target;
+                const div = document.createElement("div");
+                div.innerHTML = `<img class="thumbnail-ex7" src="${picFile.result}" title="${picFile.name}"/>`;
+                output.appendChild(div);
+            });
+            picReader.readAsDataURL(files[i]);
+        }
+    } else {
+        alert("The browser does not support the File API");
+    }
+});
+
+// ex8
+
+let filesEx8 = [];
+let buttonEx8 = document.querySelector('.top-ex8 button');
+let formEx8 = document.getElementById('drag-over-ex8');
+let containerEx8 = document.querySelector('.container-ex8');
+let textEx8 = document.querySelector('.inner-ex8');
+let browseEx8 = document.querySelector('.select-ex8');
+let inputEx8 = document.querySelector('.files-ex8');
+
+const delImage = index => {
+    filesEx8.splice(index, 1);
+    showImagesEx8();
+};
+
+const showImagesEx8 = () => {
+    let images = '';
+    filesEx8.forEach((e, i) => {
+        images += `<div class="image-ex8">
+                <img src="${URL.createObjectURL(e)}" alt="image">
+                <span class="delete-image-btn-ex8" data-id="${i}">&times;</span>
+                <!-- <span onclick="delImage(${i})">&times;</span> -->
+            </div>`;
+    });
+    containerEx8.innerHTML = images;
+    const allDeleteImageBtnEx8 = document.querySelectorAll('.delete-image-btn-ex8');
+    allDeleteImageBtnEx8.forEach(btn => {
+        btn.addEventListener('click', (event) => {
+            event.preventDefault();
+            delImage(event.target.dataset.id);
+        });
+    });
+};
+
+browseEx8.addEventListener('click', () => inputEx8.click());
+inputEx8.addEventListener('change', () => {
+    let files = inputEx8.files;
+    for(let i=0;i<files.length;i++) {
+        if (filesEx8.every(e => e.name != files[i].name)) {
+            filesEx8.push(files[i]);
+        }
+    }
+
+    formEx8.reset();
+    showImagesEx8();
+});
+
+// drag and drop
+
+formEx8.addEventListener('dragover', e => {
+    e.preventDefault();
+    formEx8.classList.add('drag-over-ex8');
+    textEx8.innerHTML = 'Drop images here';
+});
+
+formEx8.addEventListener('dragleave', e => {
+    e.preventDefault();
+    formEx8.classList.remove('drag-over-ex8');
+    textEx8.innerHTML = `Drag & drop image here or<span class="select-ex8">Browse</span>`;
+});
+
+formEx8.addEventListener('drop', e => {
+    e.preventDefault();
+    formEx8.classList.remove('drag-over-ex8');
+    textEx8.innerHTML = `Drag & drop image here or<span class="select-ex8">Browse</span>`;
+    let files = e.dataTransfer.files;
+    for(let i=0;i<files.length;i++) {
+        if (filesEx8.every(e => e.name != files[i].name)) {
+            filesEx8.push(files[i]);
+        }
+    }
+    formEx8.reset();
+    showImagesEx8();
+    document.querySelector('.select-ex8').addEventListener('click', () => inputEx8.click());
+});
+
+// to be completed - upload files
+buttonEx8.addEventListener('click', () => {
+    let form = new FormData();
+});
 
 
 

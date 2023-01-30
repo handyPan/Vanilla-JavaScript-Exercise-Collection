@@ -15,6 +15,8 @@
         <a class="link" href="">ex4</a>
         <a class="link" href="">ex5</a>
         <a class="link" href="">ex6</a>
+        <a class="link" href="">ex7</a>
+        <a class="link" href="">ex8</a>
     </div>
     <div class="ex" id="ex1">
         <input type="file" id="image-input-ex1" accept="image/png, image/jpg">
@@ -61,6 +63,30 @@
         <input type="file" id="file-input-ex6" multiple>
         <button type="submit" id="upload-button-ex6">Upload</button>
     </div>
+    <div class="ex" id="ex7">
+        <label for="files-ex7">Select multiple files</label>
+        <input type="file" id="files-ex7" multiple="multiple" accept="image/jpeg, image/png, image/jpg">
+        <div id="result-ex7"></div>
+    </div>
+    <div class="ex" id="ex8">
+        <div class="card-ex8">
+            <div class="top-ex8">
+                <p>Drag & drop image uploading</p>
+                <button>Upload</button>
+            </div>
+            <form action="/upload" method="post" id="drag-over-ex8">
+                <span class="inner-ex8">Drag & drop image here or<span class="select-ex8">Browse</span></span>
+                <input type="file" name="files-ex8" class="files-ex8" multiple>
+            </form>
+            <div class="container-ex8">
+                <!-- <div class="image-ex8">
+                    <img src="" alt="">
+                    <span>&times;</span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
