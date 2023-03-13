@@ -17,20 +17,28 @@
         <a class="link" href="">ex6</a>
         <a class="link" href="">ex7</a>
         <a class="link" href="">ex8</a>
+        <a class="link" href="">ex9</a>
+        <a class="link" href="">ex10</a>
     </div>
     <div class="ex" id="ex1">
+        <h1>Select and show image</h1>
+        <p>Note: no uploading funtion.</p>
         <input type="file" id="image-input-ex1" accept="image/png, image/jpg">
         <div id="image-display-ex1"></div>
     </div>
     <div class="ex" id="ex2">
+        <h1>Select and show image with text input</h1>
+        <p>Note: no uploading funtion.</p>
         <div class="container" id="imgBox">
             <div id="prevText"></div>
             <textarea name="" id="textBox" placeholder="Add caption:"></textarea>
             <input type="file" accept="image/*" name="img-ex2" id="image-input-ex2">
             <label for="image-input-ex2"><img src="img/upload.png" alt="" class="upload-icon-ex2"></label>
-        </div>
+    </div>
     </div>
     <div class="ex" id="ex3">
+        <h1>Select and show image with drag and drop</h1>
+            <p>Note: no uploading funtion.</p>
         <div class="drag-drop-area-ex3">
             <div class="icon-ex3"><i class="fas fa-cloud-upload-alt"></i></div>
             <div id="header-ex3">Drag & Drop to Upload File</div>
@@ -42,6 +50,7 @@
     <div class="ex" id="ex4">
         <div class="wrapper-ex4">
             <div id="header-ex4">File UPloader with Ajax</div>
+            <p>Note: With progress bar and result shown. </p>
             <form action="#">
                 <input type="file" class="file-input-ex4" name="file-input-ex4" hidden>
                 <i class="fas fa-cloud-upload-alt"></i>
@@ -52,7 +61,7 @@
         </div>
     </div>
     <div class="ex" id="ex5">
-        <h1>Upload files with Fetch API</h1>
+        <h1>Upload file with Fetch API</h1>
         <form action="" class="form-ex5" id="form-ex5">
             <input type="file" name="file-input-ex5" id="file-input-ex5"><br>
             <button type="submit">Upload</button>
@@ -60,15 +69,21 @@
     </div>
     <div class="ex" id="ex6">
         <h1>Upload multiple files with Fetch API</h1>
+        <p>Note: Run with a domain name to avoid the "strict-origin-when-cross-origin" error;</p>
+        <p>Ex: http://www.dbxampp.com:90/project_javascript/ex006-file-uploader/</p>
         <input type="file" id="file-input-ex6" multiple>
         <button type="submit" id="upload-button-ex6">Upload</button>
     </div>
     <div class="ex" id="ex7">
-        <label for="files-ex7">Select multiple files</label>
+        <label for="files-ex7">
+            <h1>Select and show multiple images</h1>
+        </label>
+        <p>Note: no uploading function</p>
         <input type="file" id="files-ex7" multiple="multiple" accept="image/jpeg, image/png, image/jpg">
         <div id="result-ex7"></div>
     </div>
     <div class="ex" id="ex8">
+        <h1>Drag and Drop to show multiple images </h1>
         <div class="card-ex8">
             <div class="top-ex8">
                 <p>Drag & drop image uploading</p>
@@ -85,6 +100,23 @@
                 </div> -->
             </div>
         </div>
+    </div>
+    <div class="ex" id="ex9">
+        <h1>AJAX File Upload with Progress Bar</h1>
+        <form id="upload-form-ex9" action="#">
+            <input type="file" name="file-input-ex9" id="file-input-ex9">
+            <button type="submit" class="button" id="upload-button-ex9">Upload</button>
+        </form>
+        <div class="progress-bar" id="progress-bar">
+            <div class="progress-bar-fill">
+                <span class="progress-bar-text">0%</span>
+            </div>
+        </div>  
+    </div>
+    <div class="ex" id="ex10">
+        <h1>AJAX files upload</h1>
+        <input type="file" id="file-input-ex10" multiple>
+        <button id="upload-button-ex10">Upload</button>
     </div>
 
     <script src="main.js"></script>

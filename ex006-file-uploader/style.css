@@ -277,6 +277,11 @@ body {
     font-size: 16px;
 }
 
+/* ex5 */
+#ex5 form input {
+    display: block;
+}
+
 /* ex7 */
 
 #result-ex7 {
@@ -416,3 +421,30 @@ form input {
 .container-ex8 .image-ex8 span:hover {
     opacity: 0.8;
 }
+
+/* ex9 */
+#upload-form-ex9 input {
+    display: block;
+}
+
+.progress-bar {
+    height: 35px;
+    width: 100%;
+    border: 2px solid darkblue;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transition: width 0.25s;
+}
+
+.progress-bar-text {
+    margin-left: 10px;
+    font-weight: bold;
+}
+

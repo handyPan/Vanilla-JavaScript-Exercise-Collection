@@ -386,5 +386,41 @@ buttonEx8.addEventListener('click', () => {
     let form = new FormData();
 });
 
+// ex9
+const uploadFormEx9 = document.getElementById('upload-form-ex9');
+const inputEx9 = document.getElementById('file-input-ex9');
+const progressBarFill = document.querySelector('#ex9 > #progress-bar > .progress-bar-fill')
+const progressBarText = progressBarFill.querySelector('.progress-bar-text');
+
+uploadFormEx9.addEventListener('submit', uploadFileEx9);
+
+function uploadFileEx9(event) {
+    event.preventDefault();
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "php/upload-ex9.php");
+    xhr.upload.addEventListener("progress", event => {
+        let percent = event.lengthComputable ? (event.loaded / event.total) * 100: 0;
+        progressBarFill.style.width = percent.toFixed(2) + "%";
+        progressBarText.textContent = percent.toFixed(2) + "%";
+    });
+    let data = new FormData(uploadFormEx9)
+    xhr.send(data);
+    console.log(data);
+}
+
+// ex10
+const inputEx10 = document.getElementById('file-input-ex10');
+const btnUploadEx10 = document.getElementById('upload-button-ex10');
+
+btnUploadEx10.addEventListener('click', function() {
+    const xhr = new XMLHttpRequest();
+    const data = new FormData();
+    for (const file of inputEx10.files) {
+        data.append("file-input-ex10[]", file);
+    }
+    xhr.open("POST", "php/upload-ex10.php");
+    xhr.send(data);
+});
+
 
 
